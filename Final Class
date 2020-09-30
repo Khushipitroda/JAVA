@@ -1,0 +1,15 @@
+//AIM: Write a program in Java to demonstrate use of final class.
+
+//CODE:
+final class Demo{
+	final int a=10;
+	final void disp(){
+		System.out.println("Final variable="+a);
+	}
+}
+public class p24 extends Demo{
+	public static void main(String args[]){
+		Demo d= new Demo();
+		d.disp();
+	}
+}
