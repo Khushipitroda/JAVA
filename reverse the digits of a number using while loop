@@ -1,0 +1,22 @@
+//AIM: Write a program in Java to reverse the digits of a number using while loop
+
+//CODE:
+import java.util.Scanner;
+public class reverse
+{
+	public static void main(String args[])
+	{
+		 Scanner readme = new Scanner(System.in);
+		 System.out.println("Enter Number " );
+		int n1,n2,ans=0;
+		n1 = readme.nextInt();
+		while(n1!=0)
+		{
+			n2=n1%10;
+			ans=ans*10+n2;
+			n1=n1/10;
+			
+		}
+		 System.out.println("reverse="+ans);
+	}
+}
