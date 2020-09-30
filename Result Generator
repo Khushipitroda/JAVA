@@ -1,0 +1,44 @@
+//AIM: Write a program to display result of student according to their marks using Switch case
+
+//CODE:
+import java.util.Scanner;
+public class marks
+{
+	public static void main(String args[])
+	{
+		 Scanner readme = new Scanner(System.in);
+		 System.out.println("Enter Number " );
+		int n1;
+		n1 = readme.nextInt();
+		System.out.println("\nYour Result is:\n");
+		switch(n1/10)
+		{
+			
+			case 10:
+			case 9:
+			case 8:
+				   System.out.println("Congratulations You have passed with A+");
+				   break;
+			case 7:
+			case 6:
+				   System.out.println("Very good You have passed with A");
+				   break;
+			case 5:
+				   System.out.println("Good You have passed with B+");
+				   break;
+			case 4:
+				   System.out.println("You passed with C+");
+				   break;
+			case 3:
+			case 2:
+			case 1:
+				   System.out.println("Sorry, You havn't passed the exam");
+				   break;
+			default:
+				   System.out.println("Please enter no between 1 to 100");
+			
+		}
+	}
+}
+
+
