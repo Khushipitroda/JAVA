@@ -1,0 +1,86 @@
+//Write a program in Java to develop overloaded constructor. Also develop the copy constructor to create a new object with the state of the existing object.
+
+//•	CODE:
+import java.util.Scanner;
+class student{
+	String name;
+	String college;
+	int sem;
+	float fee;
+	student(){
+		fee=0;
+		college="GPG";
+		sem=1;
+		name="None";
+	}
+	student(String name){
+		this();
+		this.name=name;
+	}
+	student(String name,int sem){
+		this(name);
+		this.sem=sem;
+	}
+	student(String name,int sem,float fee){
+		this(name,sem);
+		this.fee=fee;
+	}
+	
+	student(String name, int sem,float fee,String college){
+		this(name,sem,fee);
+		this.college=college;
+	}
+	student(student s){
+		name=s.name;
+		college=s.college;
+		sem=s.sem;
+		fee=s.fee;
+	}
+	void display(){
+		System.out.println("\nStudent's name: "+name);
+		System.out.println("Student's college: "+college);
+		System.out.println("Student's sem: "+sem);
+		System.out.println("Student's fee: "+fee);
+	}
+}
+public class t3_3{
+	public static void main(String args[]){
+		
+		String name,college;
+		int sem;
+		float fee;
+		//default
+		student a = new student();
+		a.display();
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print("\n\nEnter student's name: ");
+		name = in.nextLine();
+		
+		student b = new student(name);
+		b.display();
+		
+		System.out.print("\n\nEnter student's sem: ");
+		sem = in.nextInt();
+		
+		student c = new student(name,sem);
+		c.display();
+		
+		System.out.print("\n\nEnter student's fee: ");
+		fee = in.nextFloat();
+		
+		student d = new student(name,sem,fee);
+		d.display();
+		
+		Scanner k = new Scanner(System.in);
+		System.out.print("\n\nEnter student's college: ");
+		college = k.nextLine();
+		
+		student e = new student(name,sem,fee,college);
+		e.display();
+		
+		//copy constructor
+		student f = new student(e);
+		f.display();
+	}
+}
