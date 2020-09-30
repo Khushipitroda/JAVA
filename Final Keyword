@@ -1,0 +1,26 @@
+//AIM:  Write  a program in Java to demonstrate the use of 'final' keyword in the field declaration. How it is accessed using the objects.
+
+//CODE:
+class fdemo{
+	final float a=10.4f;
+	final char b;
+	final int c;
+	final long d;
+	{
+		b='K';
+	}
+	//all final variables should be initilzed before constructor ends.
+	fdemo(int c){
+		this.c=c;
+		d=1023123;
+	}
+}
+public class p17{
+	public static void main(String[] args)  {
+		fdemo o2=new fdemo(10);
+		System.out.println("A = "+o2.a);
+		System.out.println("B = "+o2.b);
+		System.out.println("D = "+o2.d);
+		System.out.println("C = "+o2.c);
+	}
+}
