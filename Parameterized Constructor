@@ -1,0 +1,45 @@
+//AIM:  Create a class Cuboid having default and parameterized constructors. Calculate volume for three objects of class Cuboid instantiated using default and parameterized constructor respectively.
+
+//CODE:
+import java.util.Scanner;
+public class Cuboid{
+	int length,width,height,volume;
+	
+	Cuboid(){
+		length=1;
+		width=1;
+		height=1;
+	}
+	Cuboid(int length, int width, int height){
+		this.length=length;
+		this.width=width;
+		this.height=height;
+	}
+	void volume(){
+		volume=length*width*height;
+		System.out.println("\nLength: "+length+" Width: "+width+" Height: "+height);
+		System.out.println("Volume of Cuboid is: "+volume);
+	}
+	public static void main(String args[]){
+		int length,width,height;
+		//non-paramitrized
+		System.out.println("\n First cuboid");
+		Cuboid c1 = new Cuboid();
+		c1.volume();
+		
+		System.out.println("\n Second cuboid");
+		Scanner k = new Scanner(System.in);
+		System.out.print("\nEnter length, width, height of cuboid: ");
+		length=k.nextInt();
+		width=k.nextInt();
+		height=k.nextInt();
+		//paramitrized
+		Cuboid c2=new Cuboid(length,width,height);
+		c2.volume();
+		//paramitrized
+		
+		System.out.println("\n Third cuboid");
+		Cuboid c3 = new Cuboid (42,21,11);
+		c3.volume();
+	}
+}
