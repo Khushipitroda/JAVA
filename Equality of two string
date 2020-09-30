@@ -1,0 +1,16 @@
+//Write a Java program to read two strings from command line argument and check the equality of two string using string function.
+
+//•	CODE:
+public class t2_3{
+	public static void main(String args[]){
+		String s1 = args[0];
+		String s2 =	args[1];
+		if(s1.toUpperCase().equals(s2.toUpperCase())){
+			System.out.println("\nStrings are same");
+		}
+		else{
+			System.out.println("\nStrings are not same");
+		}
+	}
+}
+
