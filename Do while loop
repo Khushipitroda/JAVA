@@ -1,0 +1,16 @@
+//Write a program in java that calculate sum of 1 to 10 using do while loop.
+
+//•	CODE:
+public class t4
+{
+	public static void main(String args[])
+	{
+	int sum=0,i=10;
+	do
+	{
+		sum=sum+i;
+		i--;
+	} while(i>=0);
+	System.out.println("Sum="+sum);
+	}
+}
