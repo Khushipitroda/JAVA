@@ -1,0 +1,72 @@
+//AIM: Describe abstract class called Shape which has three subclasses say Triangle, Rectangle, and Circle. Define one method area()in the abstract class and override this area() in these three subclasses to calculate for specific object.
+
+//CODE:
+import java.util.Scanner;
+abstract class shape{
+	float area;
+	abstract float area();
+}
+class Triangle extends shape{
+	float width=0,height=0;
+	void gett(float h, float w){
+		height=h;
+		width=w;
+	}
+	float area(){
+		area=(height*width)/2;
+		return area;
+	}
+		
+}
+class Ractangle extends shape{
+	float width=0,height=0;
+	void getr(float h, float w){
+		height=h;
+		width=w;
+	}
+	float area(){
+		area=height*width;
+		return area;
+	}
+}
+class Circle extends shape{
+	float radius=0,pi=3.1415f;
+	void getc(float r){
+		radius=r;
+	}
+	float area(){
+		area=pi*radius*radius;
+		return area;
+	}
+}
+public class p23{
+	public static void main(String args[]){
+		//triangle
+		System.out.print("\nEnter height and width for triangle: ");
+		Scanner k = new Scanner(System.in);
+		float th = k.nextFloat();
+		float td = k.nextFloat();
+		Triangle t = new Triangle();
+		t.gett(th,td);
+		float area = t.area();
+		System.out.println("\nArea of Triangle is: "+area);
+		
+		//ractangle
+		System.out.print("\nEnter height and width for ractangle: ");
+		float rh = k.nextFloat();
+		float rd = k.nextFloat();
+		Ractangle r = new Ractangle();
+		r.getr(rh,rd);
+		area = r.area();
+		System.out.println("\nArea of Ractangle is: "+area);
+		
+		
+		System.out.print("\nEnter radius for circle: ");
+		float rad = k.nextFloat();
+		Circle c = new Circle();
+		c.getc(rad);
+		area = c.area();
+		System.out.println("\nArea of Circle is: "+area);
+		
+	}
+}
