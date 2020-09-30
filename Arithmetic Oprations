@@ -1,0 +1,45 @@
+//Write Program to perform arithmetic operations.
+
+//•	CODE:
+import java.util.Scanner;
+public class t1
+{
+	public static void main(String args[])
+	{
+		 Scanner readme = new Scanner(System.in);
+		 System.out.println("Enter 2 Number " );
+		int a,b,ans;
+		a = readme.nextInt();
+		b = readme.nextInt();
+
+		 System.out.println("Enter arithmetic oprator " );
+		 char ch = readme. next().charAt(0);
+		System.out.println("\nYour Result is:\n");
+		switch(ch)
+		{
+			case '+':ans=a+b;
+					System.out.println("Addition="+ans);
+					break;
+
+			case '-':ans=a-b;
+					System.out.println("Subtraction="+ans);
+					break;
+
+			case '*':ans=a*b;
+					System.out.println("Muliplication="+ans);
+					break;
+
+			case '/':if(b!=0)
+						{	ans=a/b;
+							System.out.println("Subtraction="+ans);
+						}
+					else
+						{
+							System.out.println("Can't divide by zero");
+						}
+							break;
+			default:
+				   System.out.println("Please enter correct arithmetic oprator");
+		}
+	}
+}
