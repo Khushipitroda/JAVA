@@ -1,0 +1,15 @@
+//AIM:   Write a program in Java to find maximum of three numbers using conditional operator.
+  
+//CODE:
+public class max
+{
+	public static void main(String args[]) 
+	{
+		int n1=Integer.parseInt(args[0]);
+		int n2=Integer.parseInt(args[1]);
+		int n3=Integer.parseInt(args[2]);
+		int max=0;
+		max=(n1>n2 && n1>n3)? n1:((n2>n3)?n2:n3);
+			System.out.println("Max="+max);
+    	}
+}
