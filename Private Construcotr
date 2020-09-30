@@ -1,0 +1,30 @@
+//AIM: Write a program in Java to demonstrate the use of private constructor and also write a method which will count the number of instances created using default constructor only.
+
+//CODE:
+class Singleton{
+   static int count=0; 
+   //private instance Object of same class 
+  private static Singleton single_instance = null;
+   //private constructor 
+   private Singleton() {
+	   count++;  
+	}
+   // Method that creates and returns same class that is Singleton Object. 
+   static public Singleton createInstance(){ 
+		if(single_instance==null){
+			single_instance = new Singleton(); 
+		}
+   return single_instance;    
+   }  
+   void display(){ 
+		System.out.println("Count: "+count);
+   } 
+}  
+class SingletonMain{     
+		public static void main(String args[]) {  
+			Singleton s1 = Singleton.createInstance();
+			Singleton s2 = Singleton.createInstance();
+			s1.display();
+			s2.display();    
+		}   
+ }
