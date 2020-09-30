@@ -1,0 +1,28 @@
+//AIM:  Write a program that creates class Distance and assigns values to variable using constructor and this keyword.
+
+//CODE:
+import java.util.Scanner;
+public class Distance{
+	int dist, speed, time;
+	Distance(int speed,int time){
+		this.speed = speed;
+		this.time = time;
+	}
+	void calcdist(){
+		this.dist = this.speed*this.time;
+	}
+	void display(){
+		this.calcdist();
+		System.out.println("\nDistance: "+this.dist);
+	}
+	public static void main(String args[]){
+		
+		Scanner k = new Scanner(System.in);
+		
+		System.out.print("\nEnter speed and time: ");
+		int speed = k.nextInt();
+		int time = k.nextInt();
+		Distance D = new Distance(speed, time);
+		D.display();
+	}
+}
