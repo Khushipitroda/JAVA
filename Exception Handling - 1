@@ -1,0 +1,80 @@
+//AIM: Write a program in Java to demonstrate multiple try block and multiple catch exception
+//CODE:
+class exc{
+	public static void main(String args[]){
+		int a = Integer.parseInt(args[0]);
+		int b = Integer.parseInt(args[1]);
+		try{
+			int div=a/b;
+			if(a==1){
+				try{
+					a = a/(a-a);
+				}
+				catch(ArithmeticException e) {
+					System.out.print("\nDivide by 0 inside nested try block: ");
+					e.printStackTrace(); 
+				}
+				catch(Exception e){
+					System.out.println("\nThis will not exceuted if exception is found in before catch statment");
+				}
+			}
+			if(a>0){
+				try{
+						int arr[] = new int[-10];
+				}
+				catch(ArithmeticException sa){
+					System.out.println("\nArithmetic Exception inside try block won't be executed");
+				}
+				catch(NegativeArraySizeException e){
+					System.out.print("\nNegative Array Size: ");
+					e.printStackTrace(); 
+				}	
+			}
+		}
+		catch(ArithmeticException k){
+			System.out.println("Arithmetic Exception in main try block "+k);
+		}
+		catch(Exception e){
+			System.out.println("Main try block it will not be executed Exception"+e);
+		}
+	try{
+		int arr[] = { 1 };
+		arr[81] = 100; 
+	}
+	catch(ArrayIndexOutOfBoundsException e){
+			System.out.print("Array index out-of-bounds: ");
+			 e.printStackTrace(); 
+	}
+		
+	try{
+		String s = new String("HELLO");
+		char c = s.charAt(20);
+		//this will not executed because control will jump for catch statment
+		if(a<0){
+			try{
+					int arr[] = new int[-10];
+			}
+			catch(ArithmeticException sa){
+				System.out.println("\nArithmetic Exception inside try block won't be executed");
+			}
+			catch(NegativeArraySizeException e){
+				System.out.print("\nNegative Array Size: ");
+				e.printStackTrace(); 
+			}	
+		}
+	}
+	catch(NullPointerException np){
+		System.out.println("\nNull pointer exception inside try block but catch block is outside nested try block");
+	}
+	catch(ArithmeticException sa){
+		System.out.println("\nArithmetic Exception in second try block it won't execute "+sa);
+	}
+	catch(StringIndexOutOfBoundsException e){
+		System.out.print("\nString index out-of-bounds outside try block: ");
+		e.printStackTrace(); 
+	}
+	catch(Exception e){
+		System.out.println("There is some exception"+e);
+	}
+	}
+}
