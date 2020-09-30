@@ -1,0 +1,69 @@
+//AIM: Write a program in Java to demonstrate single inheritance, multilevel inheritance and hierarchical inheritance.
+
+//CODE:
+class pin{
+	int gpin=380009;
+	int hpin=382350;
+	char o;
+	void pin(char o){ 
+		this.o=o;
+		if(o=='H'){
+			System.out.println(hpin);
+		}
+		else{
+			System.out.println(gpin);
+		}
+	}
+}
+//simple inheritance
+class India extends pin{
+	char o;
+	void indiaadd(char o){
+		this.o=o;
+		System.out.print(",India");
+		super.pin(o);
+	}
+}
+//multilevel
+class Guj extends India{
+	char o;
+	void gujadd(char o){
+		this.o=o;
+		System.out.print(",Gujarat");
+		super.indiaadd(o);
+	}
+}
+class ahm extends Guj{
+	char o;
+	void ahmadd(char o){
+		this.o=o;
+		System.out.print(",Ahmedabad");
+		super.gujadd(o);
+	}
+}
+//hierarchical inheritance
+class home extends ahm{
+	void homeadd(){
+		System.out.print("C-203,Surabhi Residency,Nikol");
+		super.ahmadd('H');
+	}
+}
+//hierarchical inheritance
+class gpg extends ahm{
+	void gpgadd(){
+		System.out.print("GPG, opp. PRL ");
+		super.ahmadd('G');
+	}
+}
+
+public class p19{
+	public static void main(String args[]){
+		System.out.println("\n\nCollege Address");
+		gpg obj1 = new gpg();
+		obj1.gpgadd();
+		System.out.println("\n\nHome Address");
+		home obj2 = new home();
+		obj2.homeadd();
+	}
+}
+
