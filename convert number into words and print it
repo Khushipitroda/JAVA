@@ -1,0 +1,138 @@
+//Write a program in Java to convert number into words & print it.
+
+//•	CODE:
+
+public class t9
+{
+   public static void main( String args[] ) 
+   {
+      	int n=Integer.parseInt(args[0]);
+      	String[] a={ "Zero","One", "Two", "Three", "Four",
+			"Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve",
+			"Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
+			"Eighteen", "Nineteen", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Senventy", "Eighty", "Ninty", "Hundred"};
+			System.out.println("\n\nYou have Entered :");
+			
+			if(n>100&&n<200)
+			{
+				System.out.print("One "+a[28]+" and ");
+				n=n-100;
+				
+			}
+			else if(n>200&&n<300)
+			{
+				System.out.print("Two "+a[28]+" and ");
+				n=n-200;
+			}
+			else if(n>300&&n<400)
+			{
+				System.out.print("Three "+a[28]+" and ");
+				n=n-300;
+			}
+			else if(n>400&&n<=500)
+			{
+				System.out.print("Four "+a[28]+" and ");
+				n=n-400;
+			}
+
+
+			int i=n%10;
+			
+			if(n>=0&& n<=20)
+			{
+				System.out.print(a[n]);
+			}
+			else if(n>20&&n<30)
+			{
+				System.out.println(a[20]+" "+a[i]);
+			}
+			else if(n>=30&&n<40)
+			{
+				if(n==30)
+				{	
+					System.out.println(a[21]);
+				}
+				else 
+				{
+				System.out.println(a[21]+" "+a[i]);
+				}
+			}
+			else if(n>=40&&n<50)
+			{
+				if(n==40)
+				{	
+					System.out.println(a[22]);
+				}
+				else 
+				{
+				
+				System.out.println(a[22]+" "+a[i]);
+				}
+			}
+			else if(n>=50&&n<60)
+			{
+				if(n==50)
+				{	
+					System.out.println(a[23]);
+				}
+				else 
+				{
+				
+				System.out.println(a[23]+" "+a[i]);
+				}
+			}
+			else if(n>=60&&n<70)
+			{
+				if(n==60)
+				{	
+					System.out.println(a[24]);
+				}
+				else 
+				{
+				System.out.println(a[24]+" "+a[i]);
+				}
+			}
+			else if(n>=70&&n<80)
+			{
+				if(n==70)
+				{	
+					System.out.println(a[25]);
+				}
+				else 
+				{
+				System.out.println(a[25]+" "+a[i]);
+				}
+			}
+			else if(n>=80&&n<90)
+			{
+				if(n==80)
+				{	
+					System.out.println(a[26]);
+				}
+				else 
+				{
+				System.out.println(a[26]+" "+a[i]);
+				}
+			}
+			else if(n>=90&&n<100)
+			{
+				if(n==90)
+				{	
+					System.out.println(a[27]);
+				}
+				else if(n==100)
+				{
+					System.out.println(a[28]);
+				}
+				else 
+				{
+				System.out.println(a[27]+" "+a[i]);
+				}
+			}
+			
+System.out.println("\n");
+
+		
+   }
+}
+
