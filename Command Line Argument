@@ -1,0 +1,34 @@
+//Write a Java Program to display the 3 city names using the command-line arguments.
+
+//•	CODE:
+class t2
+{
+ 	public static void main(String args[])
+ 	{
+
+  	int l=args.length;
+  	if(l==3)
+ 	 {
+ 		  System.out.println("\nFirst City Name="+args[0]);
+  		 System.out.println("\nSecond City Name="+args[1]);
+  		 System.out.println("\nThird City Name="+args[2]);
+  	 }
+
+ 	 else if(l>=1 && l<3)
+ 	 {
+ 	  System.out.println("You entered Less then 3 City");
+  	 }
+
+  else if(l>3)
+  	 {
+   	 System.out.println("You entered more then 3 City");
+  	}
+
+  	else
+  	{
+   	System.out.println("You not entered argument");
+  	}
+
+ 	}
+}
+
