@@ -1,0 +1,30 @@
+//AIM: Write a program in Java in which a subclass constructor invokes the constructor of the super class and instantiate the values
+//CODE:
+class ahm extends Guj{
+	String o;
+	ahm(String o){
+		this.o=o;
+		System.out.print(o);
+	}
+}
+class home extends ahm{
+	String h;
+	home(String h){
+		super("\nAhmedabad-->");
+		this.h=h;
+		System.out.print(h);
+	}
+}
+class num extends home{
+	num(String n){
+		super("Surabhi Residency,Nikol-->");
+		System.out.println(n);
+	}
+}
+public class p21{
+	public static void main(String args[]){
+		System.out.println("\nHome Address");
+		num obj=new num("C-203");
+		
+	}
+}		
