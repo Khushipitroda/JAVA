@@ -1,0 +1,51 @@
+//AIM:   Write a program in Java to multiply two matrix.
+  
+//CODE:
+import java.util.Scanner;
+public class p10
+{
+    public static void main(String args[])
+    {
+        Scanner readme = new Scanner(System.in);
+        int[][] n1 = new int[3][3];
+        int[][] n2 = new int[3][3];
+        int[][] ans = new int[3][3];
+        System.out.println("Enter the elements for 1st matrix \n");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                n1[i][j] = readme.nextInt();
+            }
+        }
+        System.out.println("Enter the elements for 2nd matrix\n");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                n2[i][j] = readme.nextInt();
+            }
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                ans[i][j]=0;
+                for (int k = 0; k < 3; k++)
+                {
+                    ans[i][j]+=n1[i][k]*n2[k][j]; 
+                }
+            }
+        }
+        System.out.println("Multiplication:\n");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                System.out.print(ans[i][j] + " ");
+            }
+            System.out.println("\n");
+        }
+    }
+}
+
