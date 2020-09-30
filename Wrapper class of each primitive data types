@@ -1,0 +1,65 @@
+//Write programs in Java to use Wrapper class of each primitive data types.
+
+//•	CODE:
+import java.util.Scanner;
+public class t2_6{  
+public static void main(String args[]){  
+Scanner k = new Scanner(System.in);
+System.out.println("\nEnter byte");
+byte b = k.nextByte();  
+System.out.println("\nEnter short");
+short s = k.nextShort();  
+System.out.println("\nEnter int");
+int i = k.nextInt();  
+System.out.println("\nEnter long");
+long l = k.nextLong();  
+System.out.println("\nEnter float");
+float f = k.nextFloat();  
+System.out.println("\nEnter double");
+double d = k.nextDouble();  
+char c='a';  
+boolean b2=true;  
+  
+//Autoboxing: Converting primitives into objects  
+Byte byteobj=b;  
+Short shortobj=s;  
+Integer intobj=i;  
+Long longobj=l;  
+Float floatobj=f;  
+Double doubleobj=d;  
+Character charobj=c;  
+Boolean boolobj=b2;  
+  
+//Printing objects  
+System.out.println("\n---Printing object values---");  
+System.out.println("Byte object: "+byteobj);  
+System.out.println("Short object: "+shortobj);  
+System.out.println("Integer object: "+intobj);  
+System.out.println("Long object: "+longobj);  
+System.out.println("Float object: "+floatobj);  
+System.out.println("Double object: "+doubleobj);  
+System.out.println("Character object: "+charobj);  
+System.out.println("Boolean object: "+boolobj);  
+  
+//Unboxing: Converting Objects to Primitives  
+byte bytevalue=byteobj.byteValue();  
+short shortvalue=shortobj;  
+int intvalue=intobj;  
+long longvalue=longobj;  
+float floatvalue=floatobj;  
+double doublevalue=doubleobj;  
+char charvalue=charobj;  
+boolean boolvalue=boolobj;  
+  
+//Printing primitives  
+System.out.println("\n---Printing primitive values---");  
+System.out.println("byte value: "+bytevalue);  
+System.out.println("short value: "+shortvalue);  
+System.out.println("int value: "+intvalue);  
+System.out.println("long value: "+longvalue);  
+System.out.println("float value: "+floatvalue);  
+System.out.println("double value: "+doublevalue);  
+System.out.println("char value: "+charvalue);  
+System.out.println("boolean value: "+boolvalue);  
+}
+}   
