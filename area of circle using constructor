@@ -1,0 +1,29 @@
+//Write a Java program to calculate area of circle using constructor.
+
+//•	CODE:
+import java.util.Scanner;
+class area
+{
+	double ans;
+	area(){
+		ans=(22*1*1)/7;
+	}
+	area(double r)
+	{
+		ans= (22*r*r)/7;
+	}
+}
+class t3_1 
+{
+   public static void main(String args[]) 
+    {   
+		area  a=new area();
+		System.out.println("\nArea of Circle is with default Constructor: " + a.ans);  
+		Scanner k= new Scanner(System.in);
+		System.out.print("\nEnter the radius: ");
+		double r= k.nextDouble();  
+		area  a1=new area(r);
+		System.out.println("Area of Circle is witht parametrized Constructor: " + a1.ans);      
+   }
+ }
+
