@@ -1,0 +1,55 @@
+//AIM:  Write a Java Program with class Rectangle having instance variable width, length, area and colour. 
+//Create methods like setData() and area().
+//Create two object of Rectangle and compare their area and colour. 
+//If area and colour both are the same for the objects then display “Matching Rectangles”, otherwise display “Non matching Rectangle”.
+
+//CODE:
+import java.util.Scanner;
+class Rectangle { 
+int width,length,area;
+String colour;
+	void setData(int w,int l,String c) {
+	 width =w;           
+	 length=l; 
+	 colour=c;
+	}
+	void area() {
+	area = width * length; 
+	} 
+} 
+public class p11{
+ public static void main(String args[]){
+	int width,length;
+	String colour;
+	Scanner in = new Scanner(System.in);
+	System.out.print("\nEnter Width of rectangle: ");
+	width = in.nextInt();
+	System.out.print("\nEnter Length of rectangle: ");
+	length = in.nextInt();
+	System.out.print("\nEnter Colour of rectangle: ");
+	Scanner read = new Scanner(System.in);
+	colour = read.nextLine();
+
+	System.out.println("\n-----Enter values for Second Rectangle----- ");
+
+	Rectangle r1 = new Rectangle();
+	r1.setData(width,length,colour);
+	r1.area();
+	System.out.print("\nEnter Width of rectangles: ");
+	width = in.nextInt();
+	System.out.print("\nEnter Length of rectangles: ");
+	length = in.nextInt();
+	System.out.print("\nEnter Colour of rectangles: ");
+	colour = read.nextLine();
+	Rectangle r2 = new Rectangle();
+	r2.setData(width,length,colour);
+	r2.area();
+
+	if(r1.area==r2.area && r1.colour.equals(r2.colour)){
+		System.out.println("\nMatching Rectangles"); 
+		} 
+	else{ 
+	System.out.println("\nNon Matching Rectangles"); 
+	}
+	}
+ }
