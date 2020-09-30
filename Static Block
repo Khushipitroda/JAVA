@@ -1,0 +1,11 @@
+//Write a static block which will be executed before main( ) method in a class.
+
+//•	CODE:
+ public class t3_5{
+	static{
+		System.out.println("\nThis is static block which will execute before main()");
+	}
+	public static void main(String args[]){
+		System.out.println("\nThis is main method");
+	}
+}
