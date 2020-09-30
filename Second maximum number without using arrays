@@ -1,0 +1,27 @@
+//Write a program in Java to find second maximum of n numbers without using arrays.
+
+//•	CODE:
+import java.util.Scanner;
+public class t2_5{
+	public static void main(String args[]){
+		Scanner k = new Scanner(System.in);
+		System.out.print("\nEnter number of elements: ");
+		int n = k.nextInt();
+		int max = 0,smax = 0;
+		
+		System.out.print("\nEnter "+n+" elements:");
+		while(n>0){
+			int ele = k.nextInt();
+			if(ele>max){
+				smax = max;
+				max=ele;
+			}
+			else if(ele>smax){
+				smax=ele;
+			}
+			n--;
+		}
+		System.out.println("\nSecond Maximum: " + smax);
+	}
+}
+
