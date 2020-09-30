@@ -1,0 +1,36 @@
+//AIM: Develop programs based on variation in methods i.e. passing by value, passing by reference, returning values and returning objects from methods.
+
+//CODE:
+class Time{
+	int h;
+	Time(){
+		h=0;
+	}
+	Time(int h){
+		this.h=h;
+	}
+	Time Timeobj(Time t){
+		Time t1 = new Time();
+		t1.h = h+t.h;
+		return t1;
+	}
+	static int sum(int h1,int h2){
+		return h1+h2;
+	}
+	void display(){
+		System.out.println("Time: "+h);
+	}
+}
+public class p18{
+	public static void main(String args[]){
+		Time t1,t2,t3,t4;
+		t1 = new Time(5);
+		t2 = new Time(1);
+		t3 = new Time();
+		t4 = new Time();
+		t3 = t1.Timeobj(t2);
+		t4.h=Time.sum(t1.h,t2.h);
+		t3.display();
+		t4.display();
+	}
+}
