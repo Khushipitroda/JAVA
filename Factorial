@@ -1,0 +1,15 @@
+//Write a Java program to find factorial value using command line argument of a given number.
+
+//•	CODE:
+public class t6
+{
+	public static void main(String args[])
+	{
+		int n=Integer.parseInt(args[0]),f=1;
+		for(int i=1;i<=n;i++)
+		{
+			f*=i;
+		}
+		System.out.println("\nFactorial="+f);
+	}
+}
