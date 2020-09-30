@@ -1,0 +1,33 @@
+//AIM: Write a program that illustrates interface inheritance. Interface P12 inherits from both P1 and P2. Each interface declares one constant and one method. The class Q implements P12. Instantiate Q and invoke each of its methods. Each method displays one of the constants.
+//CODE:
+interface p1{
+	int v1=43;
+	void disp1();
+}
+interface p2{
+	int v2=54;
+	void disp2();
+}
+interface p12 extends p1,p2{
+	int v12=76;
+	void disp12();
+}
+class Q implements p12{
+	public void disp1(){
+		System.out.println("\nVariable of p1: "+v1);
+	}
+	public void disp2(){
+		System.out.println("\nVariable of p2: "+v2);
+	}
+	public void disp12(){
+		System.out.println("\nVariable of p12: "+v12);
+	}
+}
+public class p22{
+	public static void main(String args[]){
+		Q obj = new Q();
+		obj.disp1();
+		obj.disp2();
+		obj.disp12();
+	}
+}
