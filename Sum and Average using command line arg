@@ -1,0 +1,20 @@
+//Write a program to read five integer numbers from command line and display their sum and average.
+
+//•	CODE:
+public class t3
+{
+	public static void main(String args[])
+	{
+	int sum=0,avg=0;
+
+	for(int i=0;i<5;i++)
+	{
+		
+		sum+=Integer.parseInt(args[i]);
+		avg=sum/5;
+	}
+
+	System.out.println("\nSum="+sum+"\nAvg="+avg);
+	}
+}
+
