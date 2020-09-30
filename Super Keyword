@@ -1,0 +1,44 @@
+//Write a Java Program to explain super keyword.
+
+•	CODE:
+class Parentclass
+{
+	Parentclass(){
+		System.out.println("\nParent class constructor");
+	}
+	Parentclass(int x){
+		System.out.println("\nParent class parameter: "+x);
+	}
+   
+	void display(){
+		System.out.println("\nParent class method");
+   }
+}
+class t3_7 extends Parentclass
+{
+	t3_7(){
+		//super for calling constructor
+		super();
+		System.out.println("\nChild class constructor");
+	}
+	t3_7(int x){
+		//super for calling parametrized constructor
+		super(x);
+		System.out.println("\n child class parameter: "+x);
+	}
+   void display(){
+		System.out.println("\nChild class method");
+   }
+   void printMsg(){
+		display();
+		//super for calling method
+		super.display();
+   }
+   public static void main(String args[]){		
+	t3_7 obj= new t3_7();
+	obj.printMsg(); 
+	t3_7 obj1= new t3_7(10);
+	
+   }
+}
+
