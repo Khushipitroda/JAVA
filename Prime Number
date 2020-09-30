@@ -1,6 +1,6 @@
-AIM: Write a program in Java to generate first n prime numbers.
+//AIM: Write a program in Java to generate first n prime numbers.
 
-CODE:
+//CODE:
 import java.util.Scanner;
 public class prime
 {
