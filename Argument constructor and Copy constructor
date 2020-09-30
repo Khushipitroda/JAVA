@@ -1,0 +1,43 @@
+//Write a Java program using (i) Argument constructor (ii) Copy constructor to find the area of rectangle.
+
+//•	CODE:
+import java.util.Scanner;
+class area{
+	double ans=0,len=1,wid=1;
+	area(){
+		ans=len*wid;
+	}
+	area(double len,double wid){
+		this.len=len;
+		this.wid=wid;
+		ans=len*wid;
+	}
+	area(area a){
+		this.len=a.len;
+		this.wid=a.wid;
+		ans=len*wid;
+	}
+	
+}
+class t3_2 
+{
+   public static void main(String args[]) 
+    {   
+		double len,wid;
+		//default constructor
+		area  a=new area();
+		System.out.println("\nArea of Ractangle is with default Constructor: " + a.ans);  
+		Scanner k= new Scanner(System.in);
+		System.out.print("\nEnter the Length: ");
+		len= k.nextDouble();  
+		System.out.print("\nEnter the width: ");
+		wid= k.nextDouble(); 
+		//parametrized
+		area  b=new area(len,wid);
+		System.out.println("\nArea of Ractangle is with parametrized Constructor: " + b.ans);  
+		//copy constructor
+		area  c=new area(b);
+		System.out.println("\nArea of Ractangle is with copy Constructor: " + c.ans);  
+	}
+}
+		
