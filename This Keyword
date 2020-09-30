@@ -1,0 +1,25 @@
+//Write a program in Java to demonstrate use of this keyword. Check whether this can access the private members of the class or not.
+
+//•	CODE:
+ class stu{
+	private String name;
+	private String college;
+	
+	private stu(String name){
+		this.name=name;
+	}
+	stu(String name,String college){
+		this(name);
+		this.college=college;
+	}
+	void display(){
+		System.out.println("\nName: "+this.name+" \n\nCollege: "+this.college);
+	}
+}
+public class t3_4 {
+	public static void main(String args[]){
+		String name="khushi", college="gpg";
+		stu s = new stu(name,college);
+		s.display();
+	}
+}
