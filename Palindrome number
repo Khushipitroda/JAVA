@@ -1,0 +1,31 @@
+//Write a Java Program to check given number is Palindrome or not.
+
+//•	CODE:
+import java.util.Scanner;
+public class t5
+{
+	public static void main(String args[])
+	{
+
+		Scanner readme = new Scanner(System.in);
+		int n,t,ans=0;
+		System.out.println("Enter Number");
+
+		n = readme.nextInt();
+		t=n;
+		while(n>0)
+		{
+			ans=ans*10+(n%10);
+			n=n/10;
+		}
+		if(ans==t)
+		{
+			System.out.println("Palindrom");
+		}
+		else
+		{
+			System.out.println("Not Palindrom");
+		}
+	}
+}
+
