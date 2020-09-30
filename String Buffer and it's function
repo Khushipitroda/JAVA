@@ -1,0 +1,50 @@
+CODE: (String Buffer)
+
+public class stringbuffer{
+	public static void main(String args[]){
+		String s1=("StringBuuffer");
+		StringBuffer sb = new StringBuffer(s1);
+		System.out.println(sb+" - Simple constructor\n");
+		//length
+		System.out.println(sb.length()+" - Length\n");
+		//capacity
+		System.out.println(sb.capacity()+" - capacity\n");
+		//ensurecapacity
+		StringBuffer s2 = new StringBuffer("khushi");
+		s2.ensureCapacity(21);
+		System.out.println(s2.capacity()+" - "+s2+" - ensurecapacity\n");
+		//charat
+		System.out.println(s2.charAt(3)+" - charAt\n");
+		//setCharAt
+		s2.setCharAt(0,'K');
+		System.out.println(s2+" - setCharAt\n");
+		//setlength
+		s2.setLength(4);
+		System.out.println(s2+" - setLength\n");
+		//delete()
+		s2.delete(3,6);
+		System.out.println(s2+" - delete\n");
+		//delete char at
+		s2.deleteCharAt(2);
+		System.out.println(s2+" - deleteCharAt\n");
+		//append
+		s2.append("hi");
+		System.out.println(s2+" - append\n");
+		//insert
+		s2.insert(2,"us");
+		System.out.println(s2+" - insert\n");
+		//reverse
+		System.out.println(s2.reverse()+" - reverse\n");
+		s2.append("Happy");
+		//replace
+		System.out.println(s2.replace(6,11,"Hello")+" - replace\n");
+		//index of
+		int i=s2.indexOf("h");
+		System.out.println(i+" - indexOf\n");
+		//last index of
+		System.out.println(s2.lastIndexOf("h")+" - lastIndexOf\n");
+	}
+}
+
+
+
