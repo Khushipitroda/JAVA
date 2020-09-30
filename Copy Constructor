@@ -1,0 +1,50 @@
+//AIM:  Create a class Employee having instance variable name, address, age and salary. Demonstrate use of copy constructor.
+
+//CODE:
+import java.util.Scanner;
+class Employee{
+String name,address;
+int age,salary;
+//parameterized constructor 
+Employee(String n,String add, int a,int s){
+		name=n;
+		address=add;
+		age=a;
+		salary=s;
+	}
+//copy constructor 
+Employee(Employee e){
+		name = e.name;
+		address = e.address;
+		age = e.age;
+		salary = e.salary;
+	}
+}
+	public class p15{
+	public static void main(String args[]){
+		
+		String name,address;
+		int age,salary;
+		Scanner in = new Scanner(System.in);
+		System.out.print("\nEnter employee's name: ");
+		name = in.nextLine();
+		System.out.print("\nEnter employee's address: ");
+		address = in.nextLine();
+		Scanner read = new Scanner(System.in);
+		System.out.print("\nEnter employee's age: ");
+		age = read.nextInt();
+		System.out.print("\nEnter employee's salary: ");
+		salary = read.nextInt();
+
+		emp e = new emp(name,address,age,salary);
+		System.out.println("\n---Employee's details---\n");
+		System.out.println("Name: "+e.name+"\nAddress: "+e.address+"\nAge: "+e.age+"\nSalary: "+e.salary);
+
+		//copy constructor
+		System.out.println("\n---Employee's details in copy constructor---\n");
+		emp e1 = new emp(e);
+		System.out.println(e1.name);
+		System.out.println("Name: "+e1.name+"\nAddress: "+e1.address+"\nAge: "+e1.age+"\nSalary: "+e1.salary);
+		
+	}
+}
