@@ -1,0 +1,45 @@
+//AIM:  Implement Constructor chaining concept.
+
+//CODE:
+import java.util.Scanner;
+public class Cuboid_chain{
+	int length = 1 ,width = 1,height = 1,volume;
+	
+	Cuboid_chain(int length){
+		this.length = length;
+	}
+	Cuboid_chain(int length, int width){
+		this(length);
+		this.width=width;
+	}
+	Cuboid_chain(int length, int width,int heigth){
+		this(length,width);
+		this.height=height;
+	}
+	void volume(){
+		volume=length*width*height;
+		System.out.println("\nLength: "+length+" Width: "+width+" Height: "+height);
+		System.out.println("Volume of Cuboid is: "+volume);
+	}
+	public static void main(String args[]){
+		int length,width,height;
+		System.out.println("\nFirst cuboid");
+		Cuboid_chain c1 = new Cuboid_chain(10);
+		c1.volume();
+		
+		System.out.println("\n Second cuboid");
+		Cuboid_chain c3 = new Cuboid_chain (92,32);
+		c3.volume();
+		
+		System.out.println("\nThird cuboid");
+		Scanner k = new Scanner(System.in);
+		System.out.print("\nEnter length, width, height of cuboid: ");
+		length=k.nextInt();
+		width=k.nextInt();
+		height=k.nextInt();
+		Cuboid_chain c2=new Cuboid_chain(length,width,height);
+		c2.volume();
+		
+
+	}
+}
