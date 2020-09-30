@@ -1,0 +1,24 @@
+//Write programs in Java that demonstrates the use of static method.
+
+//•	CODE:
+ import java.util.Scanner;
+public class t3_6{
+static int ans;
+//static method which can use only static variable
+static void cal(int x){
+           ans = x*x;
+} 
+static {
+         System.out.println("\nStatic block initialized."); 
+         ans = 0; 
+} 
+public static void main(String args[]) {
+int x;
+Scanner in = new Scanner(System.in);
+System.out.print("\nEnter number to find square of it: ");
+x = in.nextInt();
+//don't need to have object for calling static method
+cal(x);
+System.out.println("\nSquare of "+x+" is: "+ans);
+} 
+}	
