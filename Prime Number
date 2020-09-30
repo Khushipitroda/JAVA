@@ -1,0 +1,43 @@
+AIM: Write a program in Java to generate first n prime numbers.
+
+CODE:
+import java.util.Scanner;
+public class prime
+{
+	public static void main(String args[])
+	{
+		 Scanner readme = new Scanner(System.in);
+		 System.out.println("Enter Number " );
+		int n1;
+		n1 = readme.nextInt();
+		if(n1==0||n1==1)
+		{
+				 System.out.println("You have enterd 0 or 1" );
+		}
+		else
+		{
+			System.out.println("First "+n1+" Prime Numbers are:" );
+			int k=n1;
+			for(int j=2;j<=n1 || k>0;j++)
+			{
+				int flag=0;
+				
+				
+				for(int i=2;i<j/2;i++)
+				{
+					if(j%i==0)
+					{
+						flag=1;
+						break;
+					}
+				}
+				if(flag==0)
+				{
+					k=k-1;
+					System.out.println(j);
+				}
+			}
+					
+		}
+	}
+}
