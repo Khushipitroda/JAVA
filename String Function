@@ -1,0 +1,93 @@
+AIM: Write a program to perform all String class and StringBuffer class operation.
+CODE: (String)
+public class string{  
+public static void main(String args[]){
+	//string constructor
+	char []s1={'K','H','U','S','H','I'};
+	String s2=new String(s1);
+	System.out.println("\n"+s2+" - String constructor\n");
+
+	//string constructor with index number and number of chars
+	String s3=new String(s1,2,4);
+	System.out.println(s3+" - string constructor with index number and number of chars \n");
+
+	//string constructor in string
+	String s4=new String(s1);
+	System.out.println(s4+" - String constructor with string\n");
+
+	//String constructor in byte
+	byte []s5={97,75,78};
+	String s6=new String(s5);
+	System.out.println(s6+" - String constructor with byte array\n");
+
+	//String length
+	System.out.println(s6.length()+" - String length\n");
+
+	//String litral
+	System.out.println("KHUSHI PITRODA".length()+" - Length of string with String litral\n");
+
+	//String conversion with valueOf
+	int a=98;
+	String s7 = String.valueOf(a);
+	System.out.println(s7+" - String conversion with valueOf\n");
+
+	//To extract single character from String
+	System.out.println(s2.charAt(3)+" - To extract single character from String\n");
+
+	//Char into bytes
+	byte s8[]="khushi".getBytes();
+	for(int i=0;i<s8.length;i++)
+	{
+		System.out.print(s8[i]+"\t");
+	}
+	System.out.println("- Char into bytes getbytes\n");
+
+	//char array
+	char s9[]="Pitroda".toCharArray();
+	System.out.println(s9[0]+" - String to character array\n");
+
+	//String Comparision
+	System.out.println(s2.equals(s3)+" - String comparision\n");
+	System.out.println(s2.equalsIgnoreCase("KhuShi")+" - String comparision ignore case\n");
+
+	System.out.println("Khushi Pitroda".regionMatches(0,"Khushi",0,6)+" - Region Mateches\n");
+	boolean b = "Khushi".startsWith("Khu");
+	System.out.println(b+" - Starts with and Ends with\n");
+
+	//compare to
+	Integer i="happy".compareTo("Happy");
+	if(i<0)
+	{
+		System.out.println("happy is less than Happy - comparesTo\n");
+	}
+	else if(i>0)
+	{
+		System.out.println("happy is grater than Happy - comparesTo\n");
+	}
+	else
+	{
+		System.out.println("happy is equals to Happy - comparesTo\n");
+	}
+
+	//searching string
+	int j = "JJava".lastIndexOf('a');
+	System.out.println(j+" - lastIndexOf index of a in JJava\n");
+	int k = "JJava".indexOf('a');
+	System.out.println(k+" - indexOf index of a in JJava\n");
+
+	//modifying String
+	String s10 = "Pitroda Khushi".substring(8);
+	System.out.println(s10+" - substring\n");
+	String s11 = s10+" pitroda";
+	System.out.println(s11+" - concate\n");
+	String s12 = s11.replace('p','P');
+	System.out.println(s12+" - replace\n");
+	String s13 = s12.trim();
+	System.out.println(s13+" - trim\n");
+
+	//changing case
+	String s14 = s13.toUpperCase();
+	System.out.println(s14+" - toUpperCase\n");
+	System.out.println(s14.toLowerCase()+" - toLowerCase\n");
+}
+}
