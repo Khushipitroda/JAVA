@@ -1,5 +1,6 @@
 //draw A
-static public void drawa(){
+public class drawa{
+	public static void main(String args[]){
 		int j=0,i=0;
 		for(i=0;i<=5;i++){
 			for(j=0;j<5;j++){
@@ -19,3 +20,15 @@ static public void drawa(){
 			System.out.println("");
 		}
 	}
+}
+
+/*OUTPUT
+
+* * * * *
+*       *
+*       *
+* * * * *
+*       *
+*       *
+
+*/
