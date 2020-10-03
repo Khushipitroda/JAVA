@@ -1,15 +1,21 @@
 //Write a Java program to find factorial value using command line argument of a given number.
 
 //•	CODE:
-public class t6
+//Factorial class
+public class Factorial
 {
+//main method
 	public static void main(String args[])
 	{
+	//n will store command line argument number whose factorial we have to find
+	//f is initilized to one
 		int n=Integer.parseInt(args[0]),f=1;
 		for(int i=1;i<=n;i++)
 		{
 			f*=i;
+			//it is same as f = f * i
+			
 		}
-		System.out.println("\nFactorial="+f);
+		System.out.println("\nFactorial of "+n+" = "+f);
 	}
 }
