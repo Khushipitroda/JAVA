@@ -1,0 +1,383 @@
+import java.util.Scanner;
+public class partten{
+	public static void main(String args[]){
+		System.out.print("\nEnter Any String: ");
+		Scanner sc = new Scanner(System.in);
+		
+		String name = sc.nextLine();
+		name=name.toUpperCase();
+		char[] cname = name. toCharArray();
+
+		for(int i=0;i<name.length();i++){
+			System.out.println("");
+			switch(cname[i]){
+				case 'A': drawa();
+						break;
+				case 'B': drawb();
+						System.out.println("");
+						break;
+				case 'C': drawc();
+						break;
+				case 'D': drawd();
+						break;
+				case 'E': drawe();
+						break;
+				case 'F': drawf();
+						break;
+				case 'G': drawg();
+						break;
+				case 'H': drawh();
+						break;
+				case 'I': drawi();
+						break;
+				case 'J': drawj();
+						break;
+				case 'L': drawl();
+						break;
+				case 'o': drawo();
+						break;
+				case 'P': drawp();
+						break;
+				case 'T': drawt();
+						break;
+				case 'U': drawu();
+						break;
+				case 'V': drawv();
+					break;
+				case 'X': drawx();
+						break;
+
+			}
+		}
+	}
+	static public void drawa(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==3){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+					if(j==4){
+						System.out.print("\t*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawb(){
+		drawa();
+		for(int i=0;i<5;i++){
+			System.out.print("* ");
+		}
+
+	}
+	static public void drawc(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawd(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==1){
+						System.out.print("*");
+					}
+					if(j==4){
+						System.out.print("\t*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawe(){
+		int j=0,i=0;
+		for(i=0;i<5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==2 || i==4){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawf(){
+		int j=0,i=0;
+		for(i=0;i<5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==2 ){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawg(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+
+				}
+				System.out.print(" ");
+				if(i==3 && j==2){
+					System.out.print("  * *");
+			}
+			}
+			
+			if(i==4){
+					System.out.print("\t*");
+			}
+
+			System.out.println("");
+		}
+	}
+	static public void drawh(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==3){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+					if(j==4){
+						System.out.print("\t*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawi(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0||i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==3)
+						System.out.print(" *");
+					
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawj(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			if(i==5){
+				System.out.print("* * *");
+			}
+			for(j=0;j<5;j++){
+				if(i==0){
+					System.out.print("*");
+				}
+				else{
+					if(j==3 && i!=5)
+						System.out.print(" *");
+				}
+				System.out.print(" ");
+			}
+			
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawl(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==0)
+						System.out.print("*");
+					
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawo(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+					if(j==4){
+						System.out.print("\t*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawp(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0 || i==3){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+							System.out.print("*");
+						}
+					if(i<3){
+						if(j==4){
+							System.out.print("\t*");
+						}
+					}
+
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawt(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==0){
+					System.out.print("*");
+				}
+				else{
+					if(j==3)
+						System.out.print(" *");
+					
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+	static public void drawu(){
+		int j=0,i=0;
+		for(i=0;i<=5;i++){
+			for(j=0;j<5;j++){
+				if(i==5){
+					System.out.print("*");
+				}
+				else{
+					if(j==0){
+						System.out.print("*");
+					}
+					if(j==4){
+						System.out.print("\t*");
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+	}
+
+	static public void drawv(){
+		int i, j; 
+    	for (i = 5; i >= 0; i--) { 
+        for (j = 5; j > i; j--) { 
+                System.out.print(" ");
+        } 
+  
+                System.out.print("*");
+        for (j = 1; j < (i * 2); j++) 
+            System.out.print(" ");
+  
+        if (i >= 1)  
+            System.out.print("*");
+
+        System.out.println(""); 
+    } 
+	}
+	static public void drawx(){
+	int i, j, N=5;
+    int count;
+    count = N * 2 - 1;
+    for(i=1; i<=count; i++)
+    {
+        for(j=1; j<=count; j++)
+        {
+            if(j==i || (j==count - i + 1))
+            {
+                System.out.print("*");
+            }
+            else
+            {
+                System.out.print(" ");
+            }
+        }
+
+        System.out.print("\n");
+    }
+	}
+}
