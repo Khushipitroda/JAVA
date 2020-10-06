@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class DivideByZeroException extends Exception
+{
+	DivideByZeroException()
+	{
+		super();
+	}
+	DivideByZeroException(String s)
+	{
+		super(s);
+	}
+}
+class dbz
+{
+	public static void main(String args[])
+	{ 
+		char con;
+		do{
+			Scanner s = new Scanner(System.in);
+			System.out.print("\nEnter Dividend: ");
+			int a = s.nextInt();
+			System.out.print("\nEnter Divisor: ");
+			int b = s.nextInt();
+			try
+			{
+				div(a,b);
+			}
+			catch(DivideByZeroException e)
+			{
+				System.out.println(e);
+				System.out.println("\n-------------");
+				e.printStackTrace();
+				System.out.println("\n-------------");
+				System.out.println(e.getMessage());
+			}
+		System.out.print("\nDo you want to continue enter y or Y for yes: ");
+		con = s.next().toUpperCase().charAt(0); 
+		}while(con=='Y');
+	}
+	static void div(int a,int b) throws DivideByZeroException
+	{
+		if(b<=0)
+		{
+			throw new DivideByZeroException("B should not be zero");
+		}
+		float div = a/b;
+		System.out.println("\nDivision of "+a+" and "+b+" is "+div);
+	}
+	
+}
