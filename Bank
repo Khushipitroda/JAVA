@@ -1,0 +1,108 @@
+import java.util.Scanner;
+class InsufficientFundException extends Exception
+{
+	InsufficientFundException()
+	{
+		super();
+	}
+	InsufficientFundException(String s)
+	{
+		super(s);
+	}
+}
+class NegativeAmountException extends Exception
+{
+	NegativeAmountException()
+	{
+		super();
+	}
+	NegativeAmountException(String s)
+	{
+		super(s);
+	}
+}
+class fund
+{
+	public static float BAL = 0;
+	public static void main(String args[])
+	{
+		char con;
+		do{
+		System.out.print("\nEnter D for Deposite and W for Widrowal and C for checking balance: ");
+		Scanner s = new Scanner(System.in);
+		char c = s.next().toUpperCase().charAt(0); 
+		switch(c){
+			case 'D':try{
+						deposite();
+					}
+					catch(NegativeAmountException e){
+						System.out.println(e);
+						System.out.println("\n-----------------------------");
+						e.printStackTrace();
+						System.out.println("\n------------------------------");
+						System.out.println(e.getMessage());
+			
+					}
+					break;
+			case 'W':try{
+							withdraw();
+						}
+						catch(InsufficientFundException e){
+							System.out.println(e);
+							System.out.println("\n--------------------------");
+							e.printStackTrace();
+							System.out.println("\n---------------------------");
+							System.out.println(e.getMessage());
+						}
+						break;
+			case 'C':disp();
+						break;
+
+			default:System.out.println("\nInvalid choice");
+
+		}
+		System.out.print("\nDo you want to continue enter y or Y for yes: ");
+		con = s.next().toUpperCase().charAt(0); 
+		}
+		while(con=='Y');
+		System.out.println("\n-------------------THANK-YOU--------------------");
+	}
+	static void deposite() throws NegativeAmountException{
+		float dep;
+		System.out.print("\nEnter Amount for Deposite: ");
+		Scanner s = new Scanner(System.in);
+		dep = s.nextFloat();
+		if(dep<=0){
+			throw new NegativeAmountException("\nAmount for Deposite can't be zero or negative");
+		}
+		else{
+			BAL+=dep;
+			System.out.println("\n"+dep+" Rs. Deposited");
+		}
+	}
+
+	static void withdraw() throws InsufficientFundException{
+		float withd;
+		System.out.print("\nEnter Amount for withdraw: ");
+		Scanner s = new Scanner(System.in);
+		withd = s.nextFloat();
+		if(withd<=0){
+			System.out.println("\nAmount for Withdrawal can't be zero or negative");
+		}
+		else{
+			BAL-=withd;
+			if(BAL<=0){
+				throw new InsufficientFundException("Balance is negative if you withdraw "+withd+" Rs.");
+			}
+			else{
+				System.out.println("\n"+withd+" Rs. withdowed");
+			}
+		}
+	}
+	static void disp(){
+		System.out.println("\nTotal balance: "+BAL);
+	}
+}
+		
+
+	
