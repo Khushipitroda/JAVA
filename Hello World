@@ -1,10 +1,12 @@
 //AIM: Set Java Environment, Compile and execute sample java program to print “Hello World”.
 
 //CODE:
-public class hello
+public class hello	//class named hello will be created.
 {
 	public static void main(String args[])
 	{
-		System.out.println("Hello World");
+		System.out.println("Hello World!!");
+		//It will print Hello world
+		//println is used to print something and cursor will go to next line in command prompt.
 	}
 }
