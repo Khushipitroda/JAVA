@@ -1,5 +1,5 @@
 //Write a Java program to find factorial value using command line argument of a given number.
-
+//factorial means multiplication of values till 1 to N.
 //•	CODE:
 //Factorial class
 public class Factorial
@@ -10,6 +10,9 @@ public class Factorial
 	//n will store command line argument number whose factorial we have to find
 	//f is initilized to one
 		int n=Integer.parseInt(args[0]),f=1;
+		
+		//if n = 5 answer will be 1*2*3*4*5
+		
 		for(int i=1;i<=n;i++)
 		{
 			f*=i;
