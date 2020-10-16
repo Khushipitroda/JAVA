@@ -5,24 +5,23 @@ import java.util.Scanner;
 class area
 {
 	double ans;
-	area(){
+	area(){		//default constructor
 		ans=(22*1*1)/7;
 	}
-	area(double r)
-	{
+	area(double r){		//parametried constructor
 		ans= (22*r*r)/7;
 	}
 }
-class t3_1 
+class area_of_circle
 {
-   public static void main(String args[]) 
+   public static void main(String args[]) 	//main method
     {   
-		area  a=new area();
+		area  a = new area();	//creating object of area class, it will call default constructor
 		System.out.println("\nArea of Circle is with default Constructor: " + a.ans);  
-		Scanner k= new Scanner(System.in);
+		Scanner k= new Scanner(System.in);	//creating object of scanner class
 		System.out.print("\nEnter the radius: ");
-		double r= k.nextDouble();  
-		area  a1=new area(r);
+		double r = k.nextDouble();  	//scanning radius from user
+		area  a1 = new area(r);		//it will call parameterized constructor
 		System.out.println("Area of Circle is witht parametrized Constructor: " + a1.ans);      
    }
  }
