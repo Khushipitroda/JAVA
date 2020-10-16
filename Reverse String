@@ -2,13 +2,13 @@
 
 //•	CODE:
 import java.util.Scanner;
-public class t2_4{
+public class reverse_string{
 	public static void main(String args[]){
 		System.out.print("\nEnter String: ");
-		Scanner k = new Scanner(System.in);
+		Scanner k = new Scanner(System.in);	//added through scanner class
 		String s1 = k.nextLine();
 		for(int i = s1.length()-1; i>=0 ; i--){
-			System.out.println(s1.charAt(i));
+			System.out.println(s1.charAt(i));	//it will print in reverse order
 		}
 	}
 }
