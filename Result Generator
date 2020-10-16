@@ -6,12 +6,12 @@ public class marks
 {
 	public static void main(String args[])
 	{
-		 Scanner readme = new Scanner(System.in);
+		 Scanner readme = new Scanner(System.in);	//created scanner class object
 		 System.out.println("Enter Number " );
-		int n1;
-		n1 = readme.nextInt();
+		int n1;	//one variable for storing marks
+		n1 = readme.nextInt();	//scanned from user
 		System.out.println("\nYour Result is:\n");
-		switch(n1/10)
+		switch(n1/10)	//switch case for generating greades
 		{
 			
 			case 10:
