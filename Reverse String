@@ -1,14 +1,14 @@
 //Write  a java  program  that  accepts  a  string  from  users  and  display  each  character  on separate line in reverse order.
 
-//•	CODE:
-import java.util.Scanner;
-public class t2_4{
+//CODE:
+import java.util.Scanner;	//scanner class is added because we wanted user input
+public class reverse_string{
 	public static void main(String args[]){
 		System.out.print("\nEnter String: ");
-		Scanner k = new Scanner(System.in);
-		String s1 = k.nextLine();
+		Scanner k = new Scanner(System.in);		//creating object of scanner class
+		String s1 = k.nextLine();	//added through scanner class
 		for(int i = s1.length()-1; i>=0 ; i--){
-			System.out.println(s1.charAt(i));
+			System.out.println(s1.charAt(i));	//it will print in reverse order
 		}
 	}
 }
