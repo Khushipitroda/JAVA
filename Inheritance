@@ -1,7 +1,7 @@
 //AIM: Write a program in Java to demonstrate single inheritance, multilevel inheritance and hierarchical inheritance.
 
 //CODE:
-class pin{
+class pin{	//it is parent class and print pincode
 	int gpin=380009;
 	int hpin=382350;
 	char o;
@@ -15,8 +15,9 @@ class pin{
 		}
 	}
 }
+//we have to use extends keyword in order to inherit functionality of other class
 //simple inheritance
-class India extends pin{
+class India extends pin{	//it is child class of pin class 
 	char o;
 	void indiaadd(char o){
 		this.o=o;
@@ -25,7 +26,7 @@ class India extends pin{
 	}
 }
 //multilevel
-class Guj extends India{
+class Guj extends India{	//it is multilevel because this class inhertis India class which (India) is child class of pin class that's how there is multiple level of inheritance
 	char o;
 	void gujadd(char o){
 		this.o=o;
@@ -33,7 +34,7 @@ class Guj extends India{
 		super.indiaadd(o);
 	}
 }
-class ahm extends Guj{
+class ahm extends Guj{	//multilevel
 	char o;
 	void ahmadd(char o){
 		this.o=o;
@@ -56,7 +57,7 @@ class gpg extends ahm{
 	}
 }
 
-public class p19{
+public class inheritance_ex{
 	public static void main(String args[]){
 		System.out.println("\n\nCollege Address");
 		gpg obj1 = new gpg();
