@@ -1,6 +1,6 @@
 //Write a program in Java to develop overloaded constructor. Also develop the copy constructor to create a new object with the state of the existing object.
-
-//•	CODE:
+//overloaded constructor means it has same name but diffrenet arguments or data type of arguments or number oof arguments are different
+//CODE:
 import java.util.Scanner;
 class student{
 	String name;
@@ -43,7 +43,7 @@ class student{
 		System.out.println("Student's fee: "+fee);
 	}
 }
-public class t3_3{
+public class overloaded_const{
 	public static void main(String args[]){
 		
 		String name,college;
