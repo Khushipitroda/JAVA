@@ -1,0 +1,9 @@
+import java.applet.Applet;
+import java.awt.*;
+//<APPLET CODE="pra1.class" WIDTH="500" HEIGHT="300" >
+public class pra1 extends Applet{
+	public void paint(Graphics g){
+		g.drawString("ABC",250,150);
+		g.drawOval(150,50,200,200);
+	}
+} 
